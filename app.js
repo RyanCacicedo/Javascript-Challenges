@@ -1,29 +1,38 @@
-function areaOfTriangle(base, height) {
-    return .5 * base * height
+function oppositeBoolean(bool) {
+  return !bool;
 }
 
-console.log(areaOfTriangle(3, 2))
+console.log(oppositeBoolean(false));
 
-
-function appendFrontend(string) {
-    return string + `Frontend`
+function isNotZero(num) {
+  return num !== 0;
 }
 
-console.log(appendFrontend(`Orange`))
+console.log(isNotZero(5));
 
+function calcRemainder(num1, num2) {
+  return num1 % num2;
+}
 
-function sumGreaterThan100(num1, num2) {
-    if (num1 + num2 > 100) {
-        return true
+console.log(calcRemainder(7,8));
+
+function isOdd(num) {
+  return num % 2 !== 0
+}
+
+console.log(isOdd(7));
+
+function isEven(num) {
+ if (num % 2 === 0){
+     return 1
     }
-    return false
+    return -1
 }
 
-console.log(sumGreaterThan100(80,80))
+console.log(isEven(12));
+//Shorter Version
 
-
-function lessThanOrEqualToZero(number) {
-   return number <= 0
+function isEvenn(num) {
+ return num % 2 === 0 ? 1 : -1
 }
-
-console.log(lessThanOrEqualToZero(3))
+console.log(isEvenn(3))
