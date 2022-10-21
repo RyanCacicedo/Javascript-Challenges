@@ -1,18 +1,29 @@
-function addition(num1, num2) {
-    return num1 + num2
+function areaOfTriangle(base, height) {
+    return .5 * base * height
 }
 
-console.log(addition(3, 5))
+console.log(areaOfTriangle(3, 2))
 
-function ConvertHoursIntoSeconds(hours) {
-    return hours * 1800
+
+function appendFrontend(string) {
+    return string + `Frontend`
 }
 
-console.log(ConvertHoursIntoSeconds(2))
+console.log(appendFrontend(`Orange`))
 
 
-function perimeterOfRectangle(length, width) {
-    return 2 * length + 2 * width
+function sumGreaterThan100(num1, num2) {
+    if (num1 + num2 > 100) {
+        return true
+    }
+    return false
 }
 
-console.log(perimeterOfRectangle(6,7))
+console.log(sumGreaterThan100(80,80))
+
+
+function lessThanOrEqualToZero(number) {
+   return number <= 0
+}
+
+console.log(lessThanOrEqualToZero(3))
