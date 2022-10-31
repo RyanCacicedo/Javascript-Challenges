@@ -1,51 +1,42 @@
-function calcTime(seconds) {
-   let timerMinutes = Math.floor(seconds / 60)
-   let timerSeconds = seconds % 60;
+//Turn everything to zeroes
 
-   if (timerMinutes.toString().length === 1){
-    timerMinutes = `0` + timerMinutes
-   }
-
-   return timerMinutes + `:` +timerSeconds
-}
-
-console.log(calcTime([70]))
-
-
-function getMax(arr) {
-   let max = arr[0]
+//For loop method
+function convertToZeros(arr) {
+    let newArr = []
     for (let i = 0; i < arr.length; ++i) {
-    if (arr[i] > max) {
-        max = arr[i];
+        newArr[i] = 0
     }
-   }
-   return max;
+    return newArr
 }
-console.log(getMax([10, -200, -300]))
+console.log(convertToZeros([1, 2, 3, 4, 5, 6]))
 
-// incrementing for Loop
-function reverseString(str) {
-    let reversedString = ``
-    for (let i = 0; i < str.length; ++i) {
-   reversedString = str[i] + reversedString
-   }
-   return reversedString;
+//Array fill method
+function convertToZeros(arr) {
+    return new Array(arr.length).fill(0)
 }
-console.log(reverseString(`abc`))
+console.log(convertToZeros([1, 2, 3, 4, 5, 6]))
 
-//decrementing for Loop
-function reverseString(str) {
-    let reversedString = ``
-    for (let i = str.length - 1; i >= 0; --i) {
-   reversedString += str[i]
-   }
-   return reversedString;
+//array.map method
+function convertToZeros(arr) {
+    return arr.map(elem => 0)
 }
-console.log(reverseString(`abc`))
+console.log(convertToZeros([1, 2, 3, 4, 5, 6]))
 
-//Array reverse property
-function reverseString(str) {
-    return str.split(``).reverse().join(``);
+//filter out apples for method
+function removeApples(arr) {
+    let noApples = []
+    for (let i = 0; i < arr.length; ++i) {
+        if (arr[i] !== `Apple`) {
+            noApples.push(arr[i]);
+        }
+    }
+    return noApples
+}
+console.log(removeApples(['bananna', 'Apple', 'orange']))
+
+//filter out apples array.filter method
+function removeApples(arr) {
+    return arr.filter(elem => elem !== `Apple`)
 }
 
-console.log(reverseString(`Ryan`))
+console.log(removeApples([`bananna`, `Apple`, "Orange"]))
